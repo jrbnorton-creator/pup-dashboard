@@ -136,7 +136,7 @@ export default function DashboardPage() {
         <header className="sticky top-0 z-50 border-b border-neutral-800 bg-[#09090b]/80 backdrop-blur-xl">
           <div className="px-8 h-14 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <span className="text-neutral-500 text-xs">Xero Clean</span>
+              <span className="text-neutral-500 text-xs">Advisory</span>
               <span className="text-neutral-700 text-xs">/</span>
               <span className="text-neutral-300 text-xs font-medium">Pumped Up Plumbing Ltd</span>
             </div>
@@ -147,10 +147,10 @@ export default function DashboardPage() {
         <main className="max-w-5xl mx-auto px-8 pb-8">
           <section className="pt-10 pb-6">
             <h1 className="text-3xl font-semibold text-white tracking-tight mb-2">
-              Your Xero Clean report
+              Your advisory dashboard
             </h1>
             <p className="text-base text-neutral-400 max-w-xl leading-relaxed">
-              A snapshot of your finances before and after our cleanup, plus our Fergus integration audit and items we'd like to discuss in your review session.
+              A snapshot of your finances, our Fergus integration audit, and items we'd like to discuss in your review session.
             </p>
           </section>
 

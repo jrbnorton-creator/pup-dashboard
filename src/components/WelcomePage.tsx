@@ -51,7 +51,7 @@ export default function WelcomePage({ onEnter }: WelcomePageProps) {
 
         <motion.div {...blurIn(0.5)} className="mb-10">
           <p className="text-base text-neutral-500 font-light tracking-wide">
-            Xero Clean Report
+            Advisory Dashboard
           </p>
         </motion.div>
 
