@@ -60,7 +60,7 @@ function MapIcon() {
 
 export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<TabId>('overview');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const handleTabChange = (tab: TabId) => {
     if (tab === 'after') return;
@@ -85,13 +85,13 @@ export default function DashboardPage() {
             <div className="mb-8 mt-2 shrink-0">
               {sidebarOpen ? (
                 <img
-                  src="/images/antlab-logo.png"
+                  src="./images/antlab-logo.png"
                   alt="Antlab"
                   className="h-6 brightness-0 invert opacity-80"
                 />
               ) : (
                 <img
-                  src="/images/antlab-logo.png"
+                  src="./images/antlab-logo.png"
                   alt="Antlab"
                   className="h-5 brightness-0 invert opacity-80"
                   style={{ clipPath: 'inset(0 75% 0 0)' }}

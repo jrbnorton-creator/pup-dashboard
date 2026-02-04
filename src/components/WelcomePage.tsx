@@ -36,7 +36,7 @@ export default function WelcomePage({ onEnter }: WelcomePageProps) {
         className="absolute top-8 left-8 z-20"
       >
         <img
-          src="/images/antlab-logo.png"
+          src="./images/antlab-logo.png"
           alt="Antlab"
           className="h-14 brightness-0 invert opacity-90"
         />
