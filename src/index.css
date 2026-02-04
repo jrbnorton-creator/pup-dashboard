@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-950: #0B0F14;
+  --color-base-900: #121826;
+  --color-base-800: #182233;
+  --color-base-700: #243043;
+  --color-base-600: #2E3D54;
+
+  --color-text-primary: #E7EEF8;
+  --color-text-secondary: #A7B4C6;
+  --color-text-muted: #7D8AA3;
+
+  --color-accent: #2DD4BF;
+  --color-accent-dark: #14B8A6;
+  --color-accent-light: #5EEAD4;
+
+  --color-orange: #FF6E00;
+  --color-orange-light: #FF8A33;
+
+  --color-success: #22C55E;
+  --color-warning: #FBBF24;
+  --color-error: #F87171;
+
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #0B0F14 0%, #0E1624 100%);
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -52%) scale(1.05); opacity: 1; }
+}
+
+.aurora-wrap {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.aurora-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: -10px;
+  opacity: 0.45;
+  filter: blur(10px);
+  background-image:
+    repeating-linear-gradient(100deg, #09090b 0%, #09090b 7%, transparent 10%, transparent 12%, #09090b 16%),
+    repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%);
+  background-size: 300% 200%;
+  background-position: 50% 50%;
+  mask-image: radial-gradient(ellipse 120% 120% at 50% 50%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 120% at 50% 50%, black 20%, transparent 80%);
+}
+
+.aurora-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(100deg, #09090b 0%, #09090b 7%, transparent 10%, transparent 12%, #09090b 16%),
+    repeating-linear-gradient(100deg, #3b82f6 10%, #a5b4fc 15%, #93c5fd 20%, #ddd6fe 25%, #60a5fa 30%);
+  background-size: 200% 100%;
+  mix-blend-mode: difference;
+  animation: aurora 60s linear infinite;
+}
+
+@keyframes aurora {
+  from { background-position: 50% 50%, 50% 50%; }
+  to   { background-position: 350% 50%, 350% 50%; }
+}
+
+@keyframes lbFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
